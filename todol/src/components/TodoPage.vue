@@ -5,6 +5,15 @@
   </div>
   <button type="button" @click="isModalOpen = !isModalOpen">{{ isModalOpen ? 'Close' : 'Open' }}</button>
   <modal v-if="isModalOpen" @send="acceptDatafromData"></modal>
+  <ul>
+    <li
+        v-for="mission in $store.state.List"
+        :key="mission.id"
+    >
+      {{ mission.title }}
+      {{ mission.description }}
+    </li>
+  </ul>
 </template>
 
 <script>
