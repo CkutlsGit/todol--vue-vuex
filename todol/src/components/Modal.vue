@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     clickedSendButton() {
-      this.$emit('send')
+      this.$emit('send', [this.title, this.description])
     },
     offOrOnButton() {
       return this.title !== '' && this.description !== ''

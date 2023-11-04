@@ -4,7 +4,7 @@
     <a href="#" @click="$router.push({ name: 'home' })">go home</a>
   </div>
   <button type="button" @click="isModalOpen = !isModalOpen">{{ isModalOpen ? 'Close' : 'Open' }}</button>
-  <modal v-if="isModalOpen" @send="isModalOpen = false"></modal>
+  <modal v-if="isModalOpen" @send="acceptDatafromData"></modal>
 </template>
 
 <script>
@@ -15,6 +15,15 @@ export default {
   data() {
     return {
       isModalOpen: false,
+      todoList: []
+    }
+  },
+  methods: {
+    acceptDatafromData(data) {
+      this.isModalOpen = false
+
+      this.todoList.push(data)
+      this.$store.commit('updList', this.todoList)
     }
   }
 }

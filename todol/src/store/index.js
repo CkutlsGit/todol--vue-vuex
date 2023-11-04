@@ -4,7 +4,11 @@ const store = createStore({
     state: {
         List: []
     },
-    getters: {},
+    getters: {
+        updList(state, newList) {
+            state.List = newList
+        }
+    },
     mutations: {},
     actions: {},
 })
