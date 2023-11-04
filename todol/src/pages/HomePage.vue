@@ -3,7 +3,7 @@
     <h1>Home Page</h1>
     <a href="#" @click="$router.push({ name: 'todol' })">go todol</a>
   </div>
-  <aside class="todo-list">
+  <aside class="todo-list" @click="$router.push({ name: 'todol' })">
     <h2>Ваши последние задания</h2>
     <ul>
       <li
