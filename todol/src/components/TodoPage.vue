@@ -4,7 +4,7 @@
     <a href="#" @click="$router.push({ name: 'home' })">go home</a>
   </div>
   <button type="button" @click="isModalOpen = !isModalOpen">{{ isModalOpen ? 'Close' : 'Open' }}</button>
-  <modal v-if="isModalOpen"></modal>
+  <modal v-if="isModalOpen" @send="isModalOpen = false"></modal>
 </template>
 
 <script>
