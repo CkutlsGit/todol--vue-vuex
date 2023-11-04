@@ -10,8 +10,8 @@
         v-for="mission in $store.state.List"
         :key="mission.id"
     >
-      {{ mission.title }}
-      {{ mission.description }}
+      <h1>{{ mission.title }}</h1>
+      <h1>{{ mission.description }}</h1>
     </li>
   </ul>
 </template>
@@ -24,15 +24,14 @@ export default {
   data() {
     return {
       isModalOpen: false,
-      todoList: []
     }
   },
   methods: {
     acceptDatafromData(data) {
       this.isModalOpen = false
 
-      this.todoList.push(data)
-      this.$store.commit('updList', this.todoList)
+      const mission = { title: data[0], description: data[1] }
+      this.$store.commit('updList', mission)
     }
   }
 }

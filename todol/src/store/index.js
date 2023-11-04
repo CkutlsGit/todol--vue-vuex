@@ -7,8 +7,8 @@ const store = createStore({
     getters: {
     },
     mutations: {
-        updList(state, newList) {
-            state.List = newList
+        updList(state, newMission) {
+            state.List.push(newMission)
         }
     },
     actions: {},
