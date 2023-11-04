@@ -13,6 +13,7 @@
 <script>
 export default {
   name: 'Modal',
+  emits: ['send'],
   data() {
     return {
       title: '',
