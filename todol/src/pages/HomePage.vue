@@ -1,4 +1,5 @@
 <template>
+  <header-element></header-element>
   <div class="home">
     <h1>Home Page</h1>
     <a href="#" @click="$router.push({ name: 'todol' })">go todol</a>
@@ -19,7 +20,10 @@
 
 <script>
 import { mapGetters } from "vuex";
+import headerElement from "@/pages/headerElement.vue";
+
 export default {
+  components: {headerElement},
   computed: {
     ...mapGetters(['getList'])
   }

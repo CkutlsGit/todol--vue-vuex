@@ -1,4 +1,5 @@
 <template>
+  <header-element></header-element>
   <div class="todo">
     <h1>Todo page</h1>
     <a href="#" @click="$router.push({ name: 'home' })">go home</a>
@@ -16,10 +17,11 @@
 
 <script>
 import modal from "@/components/Modal.vue";
+import headerElement from "@/pages/headerElement.vue";
 import { mapGetters } from "vuex";
 
 export default {
-  components: { modal },
+  components: { modal, headerElement },
   data() {
     return {
       isModalOpen: false,
