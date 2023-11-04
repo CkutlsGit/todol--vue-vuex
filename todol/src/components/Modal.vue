@@ -21,7 +21,10 @@ export default {
   },
   methods: {
     clickedSendButton() {
-      this.$emit('send', [this.title, this.description])
+      const mission = { title: this.title, description: this.description }
+      this.$store.commit('UPD_LIST', mission)
+
+      this.$emit('send')
     },
     offOrOnButton() {
       return this.title !== '' && this.description !== ''

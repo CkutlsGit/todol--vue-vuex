@@ -4,7 +4,7 @@
     <a href="#" @click="$router.push({ name: 'home' })">go home</a>
   </div>
   <button type="button" @click="isModalOpen = !isModalOpen">{{ isModalOpen ? 'Close' : 'Open' }}</button>
-  <modal v-if="isModalOpen" @send="acceptDatafromData"></modal>
+  <modal v-if="isModalOpen" @send="isModalOpen = false"></modal>
   <ul>
     <li
         v-for="mission in $store.state.List"
@@ -24,14 +24,6 @@ export default {
   data() {
     return {
       isModalOpen: false,
-    }
-  },
-  methods: {
-    acceptDatafromData(data) {
-      this.isModalOpen = false
-
-      const mission = { title: data[0], description: data[1] }
-      this.$store.commit('updList', mission)
     }
   }
 }
