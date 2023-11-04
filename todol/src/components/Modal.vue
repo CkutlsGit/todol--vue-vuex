@@ -1,7 +1,12 @@
 <template>
   <div class="modal">
-    <input type="text">
-    <input type="text">
+    <input type="text" v-model="title">
+    <input type="text" v-model="description">
+    <button type="button" @click="clickedSendButton" :disabled="!offOrOnButton()">Send</button>
+  </div>
+  <div class="modal__text">
+    <h1>TITLE: {{ title }}</h1>
+    <h1>DESCRIPTION: {{ description }}</h1>
   </div>
 </template>
 
@@ -12,6 +17,14 @@ export default {
     return {
       title: '',
       description: ''
+    }
+  },
+  methods: {
+    clickedSendButton() {
+      this.$emit('send')
+    },
+    offOrOnButton() {
+      return this.title !== '' && this.description !== ''
     }
   }
 }
