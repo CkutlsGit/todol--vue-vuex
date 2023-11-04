@@ -7,7 +7,7 @@
   <modal v-if="isModalOpen" @send="isModalOpen = false"></modal>
   <ul>
     <li
-        v-for="mission in $store.state.List"
+        v-for="mission in getList"
         :key="mission.id"
     >
       <h1>{{ mission.title }}</h1>
@@ -18,6 +18,7 @@
 
 <script>
 import modal from "@/components/Modal.vue";
+import { mapGetters } from "vuex";
 
 export default {
   components: { modal },
@@ -25,6 +26,9 @@ export default {
     return {
       isModalOpen: false,
     }
+  },
+  computed: {
+    ...mapGetters(['getList'])
   }
 }
 </script>

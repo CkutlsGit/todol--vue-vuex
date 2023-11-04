@@ -7,7 +7,7 @@
     <h2>Ваши последние задания</h2>
     <ul>
       <li
-          v-for="mission in $store.state.List"
+          v-for="mission in getList"
           :key="mission.id"
       >
         <h4>{{ mission.title }}</h4>
@@ -17,8 +17,15 @@
   </aside>
 </template>
 
-<style scoped>
+<script>
+import { mapGetters } from "vuex";
+export default {
+  computed: {
+    ...mapGetters(['getList'])
+  }
+}
+</script>
+
+<style>
 
 </style>
-<script setup>
-</script>
