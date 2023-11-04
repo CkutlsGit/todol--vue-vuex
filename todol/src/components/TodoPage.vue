@@ -12,6 +12,8 @@
     >
       <h1>{{ mission.title }}</h1>
       <h1>{{ mission.description }}</h1>
+      <button @click="deleteMission(mission.id)">Удалить</button>
+      <button>Изменить</button>
     </li>
   </ul>
 </template>
@@ -25,6 +27,11 @@ export default {
   data() {
     return {
       isModalOpen: false,
+    }
+  },
+  methods: {
+    deleteMission(id) {
+      this.$store.commit('DELETE_FROM_LIST', id)
     }
   },
   computed: {
