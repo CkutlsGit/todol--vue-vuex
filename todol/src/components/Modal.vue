@@ -1,8 +1,8 @@
 <template>
   <div class="modal">
     <div class="modal__content">
-      <input type="text" v-model="title" placeholder="Title mission" maxlength="46">
-      <input type="text" v-model="description" placeholder="Description mission" maxlength="60">
+      <input type="text" v-model="title" placeholder="Title mission" maxlength="20">
+      <input type="text" v-model="description" placeholder="Description mission" maxlength="30">
       <button type="button" @click="clickedSendButton" :disabled="!offOrOnButton()">Send</button>
     </div>
   </div>
