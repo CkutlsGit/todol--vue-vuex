@@ -52,7 +52,10 @@ export default {
   justify-content: center;
 }
 .todo__content h1 {
+  padding-top: 15px;
   font-size: 34px;
+  color: #504625;
+  letter-spacing: 5px;
 }
 .todo__btn--home {
   margin: 20px 0px 10px 0px;
