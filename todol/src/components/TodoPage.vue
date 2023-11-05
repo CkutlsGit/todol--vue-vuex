@@ -43,3 +43,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.todo .todo__content h1,
+.todo .todo__content .todo__btn--open-modal{
+  display: flex;
+  justify-content: center;
+}
+.todo__content h1 {
+  font-size: 34px;
+}
+</style>
