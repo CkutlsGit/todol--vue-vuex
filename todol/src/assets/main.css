@@ -12,6 +12,16 @@
 
 /* /Header */
 
+/* Home */
+
+.home {
+    background: #ccb558;
+    width: 100%;
+    height: 100vh;
+}
+
+/* /Home */
+
 /* TodoPage */
 
 .todo {
