@@ -12,7 +12,7 @@
             id="open-modal__btn"
             :class="{ 'open-modal__btn' : isModalOpen }"
             @click="isModalOpen = !isModalOpen"
-            :disabled=""
+            :disabled="isButtonOff"
         >
           {{ isModalOpen ? 'Close' : 'Write' }}
         </button>
@@ -57,7 +57,10 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(['getList'])
+    ...mapGetters(['getList']),
+    isButtonOff() {
+      return this.getList.length >= 3
+    }
   }
 }
 </script>
