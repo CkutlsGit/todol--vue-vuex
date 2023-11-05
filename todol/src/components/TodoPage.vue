@@ -1,10 +1,16 @@
 <template>
   <header-element></header-element>
   <div class="todo">
-    <h1>Todo page</h1>
-    <a href="#" @click="$router.push({ name: 'home' })">go home</a>
+    <div class="todo__content">
+      <h1>Todo page</h1>
+      <div class="todo__btn--home">
+        <a href="#" @click="$router.push({ name: 'home' })">go home</a>
+      </div>
+      <div class="todo__btn--open-modal">
+        <button type="button" @click="isModalOpen = !isModalOpen">{{ isModalOpen ? 'Close' : 'Open' }}</button>
+      </div>
+    </div>
   </div>
-  <button type="button" @click="isModalOpen = !isModalOpen">{{ isModalOpen ? 'Close' : 'Open' }}</button>
   <modal v-if="isModalOpen" @send="isModalOpen = false"></modal>
   <ul>
     <li v-for="mission in getList" :key="mission.id">
