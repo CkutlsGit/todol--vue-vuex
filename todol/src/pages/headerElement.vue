@@ -13,5 +13,15 @@ export default {
 </script>
 
 <style scoped>
+.header__logo {
+  display: flex;
+  justify-content: center;
+  padding: 20px 40px;
+}
 
+.header__logo h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #fff;
+}
 </style>
