@@ -1,12 +1,11 @@
 <template>
   <div class="modal">
+    <div class="modal__content">
+
+    </div>
     <input type="text" v-model="title">
     <input type="text" v-model="description">
     <button type="button" @click="clickedSendButton" :disabled="!offOrOnButton()">Send</button>
-  </div>
-  <div class="modal__text">
-    <h1>TITLE: {{ title }}</h1>
-    <h1>DESCRIPTION: {{ description }}</h1>
   </div>
 </template>
 
@@ -34,6 +33,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
