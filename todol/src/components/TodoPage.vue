@@ -7,7 +7,7 @@
         <a href="#" @click="$router.push({ name: 'home' })">go home</a>
       </div>
       <div class="todo__btn--open-modal">
-        <button type="button" @click="isModalOpen = !isModalOpen">{{ isModalOpen ? 'Close' : 'Open' }}</button>
+        <button type="button" @click="isModalOpen = !isModalOpen">{{ isModalOpen ? 'Close' : 'Write' }}</button>
       </div>
     </div>
   </div>
