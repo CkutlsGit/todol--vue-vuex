@@ -1,8 +1,10 @@
 <template>
   <header-element></header-element>
   <div class="home">
-    <h1>Home Page</h1>
-    <a href="#" @click="$router.push({ name: 'todol' })">go todol</a>
+    <div class="home__content">
+      <h1>Home Page</h1>
+      <a href="#" @click="$router.push({ name: 'todol' })">go todol</a>
+    </div>
   </div>
   <aside class="todo-list" @click="$router.push({ name: 'todol' })">
     <h2>Ваши последние задания</h2>
