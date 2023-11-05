@@ -11,3 +11,13 @@
 }
 
 /* /Header */
+
+/* TodoPage */
+
+.todo {
+    width: 100%;
+    height: 100vh;
+    background: #ccb558;
+}
+
+/* /TodoPage */
