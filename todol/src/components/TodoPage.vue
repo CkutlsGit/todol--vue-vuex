@@ -94,4 +94,9 @@ export default {
   background: #504625;
   color: #ccb558;
 }
+.modal-window {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
 </style>
