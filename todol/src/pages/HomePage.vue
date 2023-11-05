@@ -43,5 +43,21 @@ export default {
   font-size: 34px;
   color: #504625;
   letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+.home__content a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #ccb558;
+  font-size: 29px;
+  background: #504625;
+  width: 120px;
+  height: 45px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  transition: .5s;
+  padding: 5px 5px;
 }
 </style>
