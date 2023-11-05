@@ -32,6 +32,16 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.home {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+}
+.home__content h1 {
+  font-size: 34px;
+  color: #504625;
+  letter-spacing: 5px;
+}
 </style>
