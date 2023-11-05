@@ -16,15 +16,17 @@
       </div>
     </div>
     <div class="todo__missions">
-      <div class="todo__missions--content">
-        <ul>
-          <li v-for="mission in getList" :key="mission.id">
-            <h1>{{ mission.title }}</h1>
-            <h1>{{ mission.description }}</h1>
-            <button @click="deleteMission(mission.id)">Удалить</button>
-          </li>
-        </ul>
-      </div>
+      <ul>
+        <li v-for="mission in getList" :key="mission.id">
+          <div class="mission">
+            <div class="mission__content">
+              <h1 class="mission__title">{{ mission.title }}</h1>
+              <h1 class="mission__description">{{ mission.description }}</h1>
+              <button @click="deleteMission(mission.id)">Удалить</button>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -106,5 +108,37 @@ export default {
 .open-modal__btn {
   background: #504625;
   color: #ccb558;
+}
+.todo__missions ul {
+  list-style: none;
+}
+.mission {
+  background: #fff;
+  width: 300px;
+  height: 190px;
+  border-radius: 15px;
+  margin: 20px 20px;
+}
+.mission__content {
+  word-break: break-word;
+}
+.mission__content .mission__title {
+  margin: 10px 0px 10px 10px;
+}
+.mission__content .mission__description {
+  font-weight: 400;
+}
+.mission__content button {
+  float: right;
+  background: #504625;
+  color: #ccb558;
+  font-weight: 700;
+  border: none;
+  padding: 5px 5px;
+  transition: 1s;
+}
+.mission__content button:hover {
+  background: #fff;
+  color: #000;
 }
 </style>
