@@ -46,11 +46,33 @@ export default {
 
 <style scoped>
 .todo .todo__content h1,
+.todo .todo__content .todo__btn--home a,
 .todo .todo__content .todo__btn--open-modal{
   display: flex;
   justify-content: center;
 }
 .todo__content h1 {
   font-size: 34px;
+}
+.todo__btn--home {
+  margin: 20px 0px 10px 0px;
+}
+.todo__btn--home a {
+  text-decoration: none;
+  color: #ccb558;
+  font-size: 29px;
+  background: #504625;
+  width: 120px;
+  height: 45px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  text-transform: capitalize;
+  transition: .5s;
+}
+.todo__btn--home a:hover {
+  background: #af9d52;
+  color: #504625;
 }
 </style>
