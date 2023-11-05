@@ -15,14 +15,18 @@
         </div>
       </div>
     </div>
+    <div class="todo__missions">
+      <div class="todo__missions--content">
+        <ul>
+          <li v-for="mission in getList" :key="mission.id">
+            <h1>{{ mission.title }}</h1>
+            <h1>{{ mission.description }}</h1>
+            <button @click="deleteMission(mission.id)">Удалить</button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <ul>
-    <li v-for="mission in getList" :key="mission.id">
-      <h1>{{ mission.title }}</h1>
-      <h1>{{ mission.description }}</h1>
-      <button @click="deleteMission(mission.id)">Удалить</button>
-    </li>
-  </ul>
 </template>
 
 <script>
