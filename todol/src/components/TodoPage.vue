@@ -9,9 +9,13 @@
       <div class="todo__btn--open-modal">
         <button type="button" @click="isModalOpen = !isModalOpen">{{ isModalOpen ? 'Close' : 'Write' }}</button>
       </div>
+      <div class="modal-window">
+        <div class="modal-window__content">
+          <modal v-if="isModalOpen" @send="isModalOpen = false"></modal>
+        </div>
+      </div>
     </div>
   </div>
-  <modal v-if="isModalOpen" @send="isModalOpen = false"></modal>
   <ul>
     <li v-for="mission in getList" :key="mission.id">
       <h1>{{ mission.title }}</h1>
@@ -77,5 +81,17 @@ export default {
 .todo__btn--home a:hover {
   background: #af9d52;
   color: #504625;
+}
+.todo__btn--open-modal button {
+  margin-top: 20px;
+  padding: 5px 35px;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  transition: .2s;
+}
+.todo__btn--open-modal button:hover {
+  background: #504625;
+  color: #ccb558;
 }
 </style>
