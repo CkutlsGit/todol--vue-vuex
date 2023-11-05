@@ -7,7 +7,15 @@
         <a href="#" @click="$router.push({ name: 'home' })">go home</a>
       </div>
       <div class="todo__btn--open-modal">
-        <button type="button" id="open-modal__btn" :class="{ 'open-modal__btn' : isModalOpen }" @click="isModalOpen = !isModalOpen">{{ isModalOpen ? 'Close' : 'Write' }}</button>
+        <button
+            type="button"
+            id="open-modal__btn"
+            :class="{ 'open-modal__btn' : isModalOpen }"
+            @click="isModalOpen = !isModalOpen"
+            :disabled=""
+        >
+          {{ isModalOpen ? 'Close' : 'Write' }}
+        </button>
       </div>
       <div class="modal-window">
         <div class="modal-window__content">
