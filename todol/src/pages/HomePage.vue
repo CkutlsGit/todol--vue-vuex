@@ -69,4 +69,18 @@ export default {
   align-items: end;
   justify-content: end;
 }
+.todo-list {
+  list-style: none;
+  margin-right: 20px;
+  width: 400px;
+  min-height: 400px;
+  height: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+.todo-list ul li {
+  margin: 15px 0px 0px 40px;
+  font-size: 24px;
+  list-style: none;
+}
 </style>
