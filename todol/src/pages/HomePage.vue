@@ -1,9 +1,11 @@
 <template>
   <header-element></header-element>
   <div class="home">
-    <div class="home__content">
-      <h1>Home Page</h1>
-      <a href="#" @click="$router.push({ name: 'todol' })">go todol</a>
+    <div class="home__container">
+      <div class="home__content">
+        <h1>Home Page</h1>
+        <a href="#" @click="$router.push({ name: 'todol' })">go todol</a>
+      </div>
     </div>
     <div class="missions__content">
       <aside class="todo-list" @click="$router.push({ name: 'todol' })">
@@ -35,7 +37,7 @@ export default {
 </script>
 
 <style scoped>
-.home {
+.home__container {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -61,5 +63,10 @@ export default {
   margin: 0 auto;
   transition: .5s;
   padding: 5px 5px;
+}
+.missions__content {
+  display: flex;
+  align-items: end;
+  justify-content: end;
 }
 </style>
