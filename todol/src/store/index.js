@@ -20,7 +20,6 @@ const store = createStore({
             }
         }
     },
-    actions: {},
 })
 
 export default store
